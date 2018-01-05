@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	 
+	<!--material css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+    <!--material js-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	
+	<title>國立中正大學文學院教學與研究數位平台</title>
+	
+	<style>
+		header, main{
+			font-family:\5FAE\8EDF\6B63\9ED1\9AD4,Microsoft JhengHei,MingLiU,sans-serif;
+			font-size:150%;
+		}
+		#about_link li{
+			display:inline;
+		}
+		#tabs_list li{
+			list-style-type: circle;
+			margin-left : 25px;
+		}
+		<!-- Nav -->
+		#side-nav{
+			list-style-type: none;
+			margin-top: 100px;
+			padding: 0;
+		}
+		#nav-title{
+			display:block;
+			color: white;
+			padding: 8px 16px;
+		}
+		#side-nav li a{
+			display:block;
+			color: #000;
+			padding: 8px 16px;
+			text-decoration: none;
+		}
+		.page-footer{
+			line-height:30%;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div id="nav-header" class="nav-wrapper z-depth-1">
+				<div class="row">
+					<div class="col s10">
+						<a href="index.html" class="breadcrumb"><span class="header_text">&nbsp;主頁面</span></a>
+						<a class="breadcrumb"><span id="course_type" class="header_text"></span></a>
+					</div>
+					<div class="col s2">
+						<!-- Dropdown Trigger -->
+						<a class='dropdown-button transparent' href='#' data-activates='dropdown1'><span class="header_text">●其他系所連結</span></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- Dropdown Structure -->
+		<ul id='dropdown1' class='dropdown-content'>
+			<li id="type1"><a href="course.html?1">中國文學系</a></li>
+			<li id="type2"><a href="course.html?2">外國語文學系</a></li>
+			<li id="type3"><a href="course.html?3">歷史學系</a></li>
+			<li id="type4"><a href="course.html?4">哲學系</a></li>
+			<li id="type5"><a href="course.html?5">語言學研究所</a></li>
+			<li id="type6"><a href="course.html?6">台灣文學與創意應用研究所</a></li>
+			<li id="type7"><a href="course.html?7">媽祖文化研究所</a></li>
+			<li id="type8"><a href="course.html?8">手語語言學台灣研究中心</a></li>
+		</ul>
+		<div id="banner"></div>
+	</header>
+	<div class="container">
+		<main>
+			<div class="row">
+				<div class="col s12">
+					<br/>
+					<ul class="tabs brown lighten-3">
+						<li class="tab col l3 m4 s6"><a href="#education" class="tabs_title">教學成果</a></li>
+						<li class="tab col l3 m4 s6"><a href="#research" class="tabs_title">研究成果</a></li>
+					</ul>
+					<div class="card-panel valign-wrapper">
+						<ul id="tabs_list">
+							<div id="education">
+								<li><a class="paper_type" href="paper.html">分類1</a></li>
+								<li><a class="paper_type" href="paper.html">分類2</a></li>
+								<li><a class="paper_type" href="paper.html">分類3</a></li>
+								<li><a class="paper_type" href="paper.html">分類4</a></li>
+							</div>                     
+							<div id="research">        
+								<li><a class="paper_type" href="paper.html">專書</a></li>
+								<li><a class="paper_type" href="paper.html">專書論文</a></li>
+								<li><a class="paper_type" href="paper.html">期刊論文</a></li>
+								<li><a class="paper_type" href="paper.html">研究論文</a></li>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<hr/>
+		
+		<footer class="page-footer transparent">
+          <div class="container">
+            <div class="row">
+			  <div class="col l4 m4 push-m8 hide-on-small-only">
+				<img class="responsive-img" src="./nbg/footer.png"/>
+			  </div>
+              <div class="col l8 m8 s12 pull-m4">
+				<ul id="about_link">
+                  <li><a class="orange-text text-darken-4" href="https://www.ccu.edu.tw/">中正大學</a></li>
+				  <li> | </li>
+                  <li><a class="orange-text text-darken-4" href="http://colliber.ccu.edu.tw/">文學院</a></li>
+                </ul>
+                <p class="grey-text text-darken-3">地址：621嘉義縣民雄鄉大學路168號 文學院</p>
+				<p class="grey-text text-darken-3">電話：05-272-0411 轉 21001、21006</p>
+				<p class="grey-text text-darken-3">E-Mail: colliber@ccu.edu.tw</p>
+              </div>
+            </div>
+          </div>
+		  
+          <div class="footer-copyright">
+            <div class="container">
+				<span class="black-text">CopyRight &copy; 2016 版權為國立中正大學文學院 &nbsp;||&nbsp; 程式設計：葉俊廷</span>
+				<span id="current_date" class="grey-text text-darken-2 right"></span>
+            </div>
+          </div>
+        </footer>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			
+			var fullDate = new Date();
+			//console.log(fullDate);
+			var twoDigitMonth = (fullDate.getMonth()+1);
+			var twoDigitDay = fullDate.getDate();
+			var currentDate = "最後更新:" + fullDate.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDay;
+			console.log(currentDate);
+			$("#current_date").text(currentDate);
+			
+			var str = location.href.split("?");
+			var type = str[1].split("#");
+			//Customization for department
+			switch(type[0]) {
+			case "1":
+				localStorage.setItem("department", "1");
+				$("body").css("background-image","url('./Image/index_bg.jpg')");
+				$("#type1").hide();
+				$("#nav-header").attr("class","nav-wrapper z-depth-1  brown lighten-2");
+				$(".header_text").attr("class","header_text white-text");
+				$("#dropdown1 > li > a").attr("class","blue-grey-text text-darken-2");
+				$("#banner").html("<div class='center-align'><img src='./Image/Chinese_banner.png' /></div>");
+				$(".tabs").attr("class","tabs deep-orange accent-1");
+				$(".tabs .indicator").css("background-color","brown");
+				$(".tabs_title").attr("class","white-text");
+				$("#course_type").text("中國文學系");
+				$("title").text("中國文學系-國立中正大學文學院教學與研究數位平台");
+				break;
+			case "2":
+				localStorage.setItem("department", "2");
+				$("#type2").hide();
+				$("#nav-header").attr("class","nav-wrapper z-depth-1 light-green darken-3");
+				$(".header_text").attr("class","header_text white-text");
+				$("#dropdown1 > li > a").attr("class","blue-grey-text text-darken-2");
+				$("#banner").html("<div class='center-align'><img src='./Image/English_banner.png' height='400' /></div>");
+				$(".tabs").attr("class","tabs green lighten-2");
+				$(".tabs .indicator").css("background-color","black");
+				$(".tabs_title").attr("class","white-text");
+				$("#course_type").text("外國語文學系");
+				$("title").text("外國語文學系-國立中正大學文學院教學與研究數位平台");
+				break;
+			case "3":
+				localStorage.setItem("department", "3");
+				$("#type3").hide();
+				$("#nav-header").attr("class","nav-wrapper z-depth-1 amber darken-3");
+				$(".header_text").attr("class","header_text white-text");
+				$("#dropdown1 > li > a").attr("class","blue-grey-text text-darken-2");
+				$("#banner").css("background-image","url('./Image/History_bg.jpg')");
+				$("#banner").html("<div class='center-align'><img src='./Image/History_banner.png'/></div>");
+				$(".tabs").attr("class","tabs  amber accent-4");
+				$(".tabs .indicator").css("background-color","MediumBlue");
+				$(".tabs_title").attr("class","white-text");
+				$("#course_type").text("歷史學系");
+				$("title").text("歷史學系-國立中正大學文學院教學與研究數位平台");
+				break;
+			case "4":
+				localStorage.setItem("department", "4");
+				$("#type4").hide();
+				$("#nav-header").attr("class","nav-wrapper z-depth-1 indigo darken-3");
+				$(".header_text").attr("class","header_text white-text");
+				$("#dropdown1 > li > a").attr("class","blue-grey-text text-darken-2");
+				$("#banner").css("background-image","url('./Image/Philosophy_bg.jpg')");
+				$("#banner").html("<div class='center-align'><img src='./Image/Philosophy_banner.png' height='450px'/></div>");
+				$(".tabs").attr("class","tabs  blue-grey lighten-1");
+				$(".tabs_title").attr("class","white-text");
+				$("#course_type").text("哲學系");
+				$("title").text("哲學系-國立中正大學文學院教學與研究數位平台");
+				break;
+			case "5":
+				localStorage.setItem("department", "5");
+				//$("body").css("background-image","url('./Image/Language_bg.jpg')");
+				$("#type5").hide();
+				$("#nav-header").attr("class","nav-wrapper z-depth-1 blue-grey lighten-1");
+				$(".header_text").attr("class","header_text white-text");
+				$("#dropdown1 > li > a").attr("class","blue-grey-text text-darken-2");
+				$("#banner").html("<div class='center-align'><img src='./Image/Language_banner.png'></div>");
+				$(".tabs").attr("class","tabs blue-grey darken-2");
+				$(".tabs .indicator").css("background-color","orange");
+				$(".tabs_title").attr("class","white-text");
+				$("#course_type").text("語言學研究所");
+				$("title").text("語言學研究所-國立中正大學文學院教學與研究數位平台");
+				break;
+			case "6":
+				localStorage.setItem("department", "6");
+				$("#type6").hide();
+				$("body").css("background-image","url('./Image/index_bg.jpg')");
+				$("#nav-header").attr("class","nav-wrapper z-depth-1  brown lighten-2");
+				$(".header_text").attr("class","header_text white-text");
+				$("#dropdown1 > li > a").attr("class","blue-grey-text text-darken-2");
+				$("#banner").html("<div class='center-align'><img src='./Image/Taiwanese_banner.png' height='250px' /></div>")
+				$(".tabs").attr("class","tabs deep-orange accent-1");
+				$(".tabs .indicator").css("background-color","brown");
+				$(".tabs_title").attr("class","white-text");
+				$("#course_type").text("台灣文學與創意研究所");
+				$("title").text("台灣文學與創意研究所-國立中正大學文學院教學與研究數位平台");
+				break;
+			case "7":
+				localStorage.setItem("department", "7");
+				$("body").css("background-image","url('./Image/mazu_bg.jpg')");
+				$("#type7").hide();
+				$("#nav-header").attr("class","nav-wrapper z-depth-1 red darken-3");
+				$(".header_text").attr("class","header_text white-text");
+				$("#dropdown1 > li > a").attr("class","black-text");
+				$("#banner").html("<div class='center-align'><img src='./Image/mazu_banner.png' height='450px'/></div>");
+				$(".tabs").attr("class","tabs  blue-grey darken-1");
+				$(".tabs .indicator").css("background-color","red");
+				$(".tabs_title").attr("class","white-text");
+				$("#course_type").text("媽祖文化研究中心");
+				$("title").text("媽祖文化研究中心-國立中正大學文學院教學與研究數位平台");
+				break;
+			case "8":
+				localStorage.setItem("department", "8");
+				$("#type8").hide();
+				$("#nav-header").attr("class","nav-wrapper z-depth-1 blue lighten-1");
+				$(".header_text").attr("class","header_text white-text");
+				$("#dropdown1 > li > a").attr("class","blue-grey-text text-darken-2");
+				$("#banner").html("<div class='center-align'><img src='./Image/gesture_banner.png'/></div>");
+				$(".tabs").attr("class","tabs blue lighten-4");
+				$(".tabs .indicator").css("background-color","orange");
+				$(".tabs_title").attr("class","white-text");
+				$("#course_type").text("手語語言學台灣研究中心");
+				$("title").text("手語語言學台灣研究中心-國立中正大學文學院教學與研究數位平台");
+				break;
+			default:
+				window.location.replace("index.html");
+			}
+			
+			$('.dropdown-button').dropdown({
+				constrain_width: false, // Does not change width of dropdown to that of the activator
+				belowOrigin: true, // Displays dropdown below the button
+			});
+			
+			$('.paper_type').click(function (){
+				localStorage.setItem("paper_type", $(this).text());
+			});
+		});
+          
+	</script>
+</body>
+</html>

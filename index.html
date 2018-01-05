@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta name="description" content="國立中正大學文學院教學與研究數位平台">
+	<meta name="keyword" content="中正大學數位平台">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	 
+	<!--material css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+    <!--material js-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<script>
+	</script>
+	<title>國立中正大學文學院教學與研究數位平台</title>
+	<style>
+		body{
+			background-image:url('./Image/index_bg.jpg');
+			background-repeat:repeat;
+		}
+		#about_link li{
+			display:inline;
+		}
+		.page-footer{
+			line-height:13px;
+			position:absolutely;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div class="row">
+				<div class="col s12 m12 l12 ">
+					<img class="responsive-img" src="./nbg/title.png"/>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="row">
+				<div class="col s6 m4 l4 offset-s3 offset-m4 offset-l4">
+					<img class="responsive-img" src="./nbg/college.png"/>
+				</div>
+			</div>
+			<span class="divider"></span>
+			<div class="row">
+				<div class="col s1 m1 l1 offset-s2 offset-m2 offset-l2">
+					<a href="course.html?1"><img class="responsive-img hoverable" src="./nbg/Chinese.png"/></a>
+				</div>
+				<div class="col s1 m1 l1 ">
+					<a href="course.html?2"><img class="responsive-img hoverable" src="./nbg/English.png"/></a>
+				</div>
+				<div class="col s1 m1 l1 ">
+					<a href="course.html?3"><img class="responsive-img hoverable" src="./nbg/History.png"/></a>
+				</div>                                                 
+				<div class="col s1 m1 l1 ">                            
+					<a href="course.html?4"><img class="responsive-img hoverable" src="./nbg/Philosophy.png"/></a>
+				</div>                                                 
+				<div class="col s1 m1 l1 ">                            
+					<a href="course.html?5"><img class="responsive-img hoverable" src="./nbg/Language.png"/></a>
+				</div>                                                 
+				<div class="col s1 m1 l1 ">                            
+					<a href="course.html?6"><img class="responsive-img hoverable" src="./nbg/Taiwanese.png"/></a>
+				</div>                                                 
+				<div class="col s1 m1 l1 ">                            
+					<a href="course.html?7"><img class="responsive-img hoverable" src="./nbg/Mazu.png"/></a>
+				</div>                                                 
+				<div class="col s1 m1 l1 ">                            
+					<a href="course.html?8"><img class="responsive-img hoverable" src="./nbg/Sign_language.png"/></a>
+				</div>
+			</div>
+		</main>
+		
+		<hr/>
+		
+		<footer class="page-footer transparent">
+          <div class="container">
+            <div class="row">
+			  <div class="col l4 m4 push-m8 hide-on-small-only valign-wrapper">
+				<span class="valign"><img class="responsive-img" src="./nbg/footer.png"/></span>
+			  </div>
+              <div class="col l8 m8 s12 pull-m4">
+				<ul id="about_link">
+                  <li><a class="orange-text text-darken-4" href="https://www.ccu.edu.tw/">中正大學</a></li>
+				  <li> | </li>
+                  <li><a class="orange-text text-darken-4" href="http://colliber.ccu.edu.tw/">文學院</a></li>
+                </ul>
+                <p class="grey-text text-darken-3">地址：621嘉義縣民雄鄉大學路168號 文學院</p>
+				<p class="grey-text text-darken-3">電話：05-272-0411 轉 21001、21006 &nbsp;||&nbsp; E-Mail: colliber@ccu.edu.tw</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+				<span class="black-text">CopyRight &copy; 2016 版權為國立中正大學文學院 &nbsp;||&nbsp; 程式設計：葉俊廷</span>
+				<span id="current_date" class="grey-text text-darken-2 right"></span>
+            </div>
+          </div>
+        </footer>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+		
+			var fullDate = new Date();
+			//console.log(fullDate);
+			var twoDigitMonth = (fullDate.getMonth()+1);
+			var twoDigitDay = fullDate.getDate();
+			var currentDate = "最後更新:" + fullDate.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDay;
+			console.log(currentDate);
+			$("#current_date").text(currentDate);
+		});
+          
+	</script>
+</body>
+</html>

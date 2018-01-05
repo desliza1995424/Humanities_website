@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	 
+	<!--material css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+    <!--material js-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	
+	<title>國立中正大學文學院教學與研究數位平台</title>
+	
+	<style>
+		header, main{
+			font-family:\5FAE\8EDF\6B63\9ED1\9AD4,Microsoft JhengHei,MingLiU,sans-serif;
+			font-size:150%;
+		}
+		#about_link li{
+			display:inline;
+		}
+		#tabs_list li{
+			list-style-type: circle;
+			margin-left : 25px;
+		}
+		.page-footer{
+			line-height:30%;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div id="nav-header" class="nav-wrapper z-depth-1">
+				<div class="row">
+					<div class="col s9">
+						<a href="index.html" class="breadcrumb"><span class="header_text">&nbsp;主頁面</span></a>
+						<a id="department" class='breadcrumb transparent' href='#'><span class="header_text">相關系所</span></a>
+						<a class="breadcrumb"><span id="paper_type" class="header_text">專書論文</span></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<main>
+		<div class="row">
+			<div class="col s12 center-align">
+				<ul id="page" class="pagination transparent">
+					<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+					<li class="active"><a href="#!">1</a></li>
+					<li class="waves-effect"><a href="#!">2</a></li>
+					<li class="waves-effect"><a href="#!">3</a></li>
+					<li class="waves-effect"><a href="#!">4</a></li>
+					<li class="waves-effect"><a href="#!">5</a></li>
+					<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+				</ul>
+			</div>
+			<div class="col s12">
+				<table id="data_table" class="highlight responsive-table">
+					<thead class="blue lighten-2">
+					<tr>
+						<th data-field="date" style="width:10%">日期</th>
+						<th data-field="author" style="width:10%">作者</th>
+						<th data-field="name" style="width:65%">論文名稱</th>
+						<th data-field="remark" style="width:15%">備註</th>
+					</tr>
+					</thead>
+			
+					<tbody>
+					<tr>
+						<td>105/09/05</td>
+						<td>Eclair</td>
+						<td>to make or change something according to the buyer's or user's needs</td>
+						<td>第一筆資料</td>
+					</tr>
+					<tr>
+						<td>105/09/06</td>
+						<td>Jellybean</td>
+						<td>Taipei Economic and Cultural Representative Office in the United States 4201 Wisconsin Ave., N.W. Washington, DC 20016-2137, U.S.A.</td>
+						<td>第二筆資料</td>
+					</tr>
+					<tr>
+						<td>105/09/07</td>
+						<td>Lollipop</td>
+						<td>$7.00</td>
+						<td>第三筆資料</td>
+					</tr>
+					<tr>
+						<td>105/09/08</td>
+						<td>Lollipop</td>
+						<td>$7.00</td>
+						<td>第四筆資料</td>
+					</tr>
+					<tr>
+						<td>105/09/09</td>
+						<td>Lollipop</td>
+						<td>$7.00</td>
+						<td>第五筆資料</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+	
+	<hr/>
+	<div class="container">
+		
+		<footer class="page-footer transparent">
+          <div class="container">
+            <div class="row">
+			  <div class="col l4 m4 push-m8 hide-on-small-only">
+				<img class="responsive-img" src="./nbg/footer.png"/>
+			  </div>
+              <div class="col l8 m8 s12 pull-m4">
+				<ul id="about_link">
+                  <li><a class="orange-text text-darken-4" href="https://www.ccu.edu.tw/">中正大學</a></li>
+				  <li> | </li>
+                  <li><a class="orange-text text-darken-4" href="http://colliber.ccu.edu.tw/">文學院</a></li>
+                </ul>
+                <p class="grey-text text-darken-3">地址：621嘉義縣民雄鄉大學路168號 文學院</p>
+				<p class="grey-text text-darken-3">電話：05-272-0411 轉 21001、21006</p>
+				<p class="grey-text text-darken-3">E-Mail: colliber@ccu.edu.tw</p>
+              </div>
+            </div>
+          </div>
+		  
+          <div class="footer-copyright">
+            <div class="container">
+				<span class="black-text">CopyRight &copy; 2016 版權為國立中正大學文學院 &nbsp;||&nbsp; 程式設計：葉俊廷</span>
+				<span id="current_date" class="grey-text text-darken-2 right"></span>
+            </div>
+          </div>
+        </footer>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+		
+			var fullDate = new Date();
+			var twoDigitMonth = (fullDate.getMonth()+1);
+			var twoDigitDay = fullDate.getDate();
+			var currentDate = "最後更新:" + fullDate.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDay;
+			$("#current_date").text(currentDate);
+			
+			var str = location.href.split("?");
+			var type;
+			if(str[1] !== undefined)type = str[1].split("#");
+			var department = localStorage.getItem("department");
+			//console.log("department="+department);
+			//Customization for department
+			switch(department) {
+			case "1":
+				console.log("Chinese~~");
+				$("#department").attr("href","course.html?1");
+				$("#department span").text("中國文學系");
+				break;
+			case "2":
+				$("#department").attr("href","course.html?2");
+				$("#department span").text("外國語文學系");
+				break;
+			case "3":
+				$("#department").attr("href","course.html?3");
+				$("#department span").text("歷史學系");
+				break;
+			case "4":
+				$("#department").attr("href","course.html?4");
+				$("#department span").text("哲學系");
+				break;
+			case "5":
+				$("#department").attr("href","course.html?5");
+				$("#department span").text("語言學研究所");
+				break;
+			case "6":
+				$("#department").attr("href","course.html?6");
+				$("#department span").text("台灣文學與創意研究所");
+				break;
+			case "7":
+				$("#department").attr("href","course.html?7");
+				$("#department span").text("媽祖文化研究中心");
+				break;
+			case "8":
+				$("#department").attr("href","course.html?8");
+				$("#department span").text("手語語言學台灣研究中心");
+				break;
+			//default:
+				window.location.replace("index.html");
+			}
+			
+			var paper_type = localStorage.getItem("paper_type");
+			$('#paper_type').text(paper_type);
+			
+			var N_perPage = 2; // The number of data per page
+			$('#page li a').click(function() {
+				$('#page li').attr("class","waves-effect");
+				$(this).parent().attr("class","active");
+				$('#data_table tbody tr').hide(); 
+				var page = (parseInt($(this).text())-1)*N_perPage+1;
+				var i;
+				for(i=page;i<(page+N_perPage);i++)
+				{
+					if(i > $('#data_table tbody tr').length) {
+						//console.log("ther is no "+i+"-th data.");
+						break;
+					}
+					$('#data_table tbody tr:nth-child(' + i + ')').show();/*Show the corresponding pages*/
+				}
+			});
+		});
+          
+	</script>
+</body>
+</html>
